@@ -371,10 +371,10 @@ class ShutterCard extends HTMLElement {
   positionPercentToText(percent, inverted, alwaysPercentage, hass) {
     if (!alwaysPercentage) {
       if (percent == 100) {
-        return hass.localize(inverted?'ui.components.logbook.messages.was_closed':'ui.components.logbook.messages.was_opened');
+        return hass.localize(inverted?'ui.components.logbook.messages.is_close':'ui.components.logbook.messages.is_open');
       }
       else if (percent == 0) {
-        return hass.localize(inverted?'ui.components.logbook.messages.was_opened':'ui.components.logbook.messages.was_closed');
+        return hass.localize(inverted?'ui.components.logbook.messages.is_open':'ui.components.logbook.messages.is_close');
       }
     }
     return percent + ' %';
